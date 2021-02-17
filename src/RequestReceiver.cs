@@ -5,7 +5,7 @@
 // 
 // Author: Paolo Salvatori
 //=======================================================================================
-// Copyright © 2021 Microsoft Corporation. All rights reserved.
+// Copyright ï¿½ 2021 Microsoft Corporation. All rights reserved.
 // 
 // THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER 
 // EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF 
@@ -53,7 +53,7 @@ namespace Microsoft.Azure.Samples
         #endregion
 
         [OpenApiOperation(operationId: "GetPublicIpAddress", tags: new[] { "name" }, Summary = "Gets the name", Description = "This method calls the Ipify external site to get the public IP address of the Azure Function app.", Visibility = OpenApiVisibilityType.Important)]
-        [OpenApiParameter(name: "name", In = ParameterLocation.Query, Required = false, Type = typeof(string), Summary = "The name of the user that sends the message.", Description = "The name", Visibility = OpenApiVisibilityType.Important)]
+        [OpenApiParameter(name: "name", In = ParameterLocation.Query, Required = false, Type = typeof(string), Summary = "The name of the user", Description = "The name of the user", Visibility = OpenApiVisibilityType.Important)]
         [OpenApiResponseWithBody(statusCode: HttpStatusCode.OK, contentType: "text/plain", bodyType: typeof(string), Summary = "The response", Description = "This returns the response")]
         [FunctionName("ProcessRequest")]
         public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest request,
