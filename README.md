@@ -7,12 +7,14 @@ platforms: dotnet-core, aspnet-core
 
 ![Build .NET Core](https://github.com/paolosalvatori/azure-functions-private-endpoint-http-trigger/workflows/.NET%20Core/badge.svg)
 
-This sample shows how to call an [HTTP-triggered Azure Function](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook-trigger?tabs=csharp) using [Azure Private Endpoints](https://docs.microsoft.com/azure/private-link/private-endpoint-overview). The Azure Functions app is hosted in [Azure Functions Premium Plan](https://docs.microsoft.com/en-us/azure/azure-functions/functions-premium-plan?tabs=portal) with [Regional VNET Integration](https://docs.microsoft.com/en-us/azure/app-service/web-sites-integrate-with-vnet#regional-vnet-integration). In addition, the sample demonstrates how to use the [Azure NAT Gateway](https://docs.microsoft.com/en-us/azure/virtual-network/nat-gateway-resource) to handle outbound connections from the Azure Functions app when this makes a large number of calls to external services.
+This sample shows how to call an [HTTP-triggered Azure Function](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook-trigger?tabs=csharp) using [Azure Private Endpoints](https://docs.microsoft.com/azure/private-link/private-endpoint-overview). The Azure Functions app is hosted in [Azure Functions Premium Plan](https://docs.microsoft.com/en-us/azure/azure-functions/functions-premium-plan?tabs=portal) with [Regional VNET Integration](https://docs.microsoft.com/en-us/azure/app-service/web-sites-integrate-with-vnet#regional-vnet-integration). In addition, the sample demonstrates how to use the [Azure NAT Gateway](https://docs.microsoft.com/en-us/azure/virtual-network/nat-gateway-resource) to handle outbound connections from the Azure Functions app when this makes a large number of calls to external services. 
 
 For more information on how to use Azure Private Endpoints to let Azure Web App and HTTP-triggered Azure Functions be called via a private IP address by applications located in a virtual network, see:
 
 - [Using Private Endpoints for Azure Web App](https://docs.microsoft.com/en-us/azure/app-service/networking/private-endpoint).
 - [Create an App Service app and deploy a private endpoint by using an Azure Resource Manager template](https://docs.microsoft.com/en-us/azure/app-service/scripts/template-deploy-private-endpoint).
+
+For a similar sample with a non-HTTP-triggered Azure Function, see [Azure Functions, Private Endpoints, and NAT Gateway](https://github.com/paolosalvatori/azure-function-premium-plan). 
 
 ## Deploy to Azure
 
