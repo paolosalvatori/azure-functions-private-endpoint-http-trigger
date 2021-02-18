@@ -2,4 +2,4 @@
 
 |    Date    |       Notes       |
 |------------|-------------------|
-| 2020-06-02 |  Initial release. |
+| 2021-02-15 |  Initial release. |

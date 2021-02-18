@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Variables
-resourceGroupName="LeoNatGwRG"
-location="WestEurope"
+resourceGroupName="<your-resource-group-name>"
+location="<your-favorite-location>"
 deploy=1
 
 # ARM template and parameters files
