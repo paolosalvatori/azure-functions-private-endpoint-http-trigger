@@ -437,7 +437,7 @@ You can proceed as follows to run the sample:
   nslookup funcapp.azurewebsites.net
   ```
 
-  The command should return a result as the following:
+  The command should return a result as follows:
 
   ![Prefix](images/nslookup.png)
 
