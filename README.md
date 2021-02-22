@@ -446,16 +446,16 @@ You can proceed as follows to run the sample:
   | Name                                  | Type  |  Value                                | Remarks                                  |
   |:--------------------------------------|:------|:--------------------------------------|:-----------------------------------------|
   | funcapp.azurewebsites.net             | CNAME | funcapp.privatelink.azurewebsites.net | Azure creates this entry in Azure Public DNS to point the app service to the privatelink |
-  | funcapp.privatelink.azurewebsites.net | A     | 10.0.1.11                             | You manage this entry in your DNS system to point to your Private Endpoint IP address     |
+  | funcapp.privatelink.azurewebsites.net | A     | Private Endpoint IP                   | You manage this entry in your DNS system to point to your Private Endpoint IP address     |
 
   After this DNS configuration you can reach your Web App privately with the default name `funcapp.azurewebsites.net`. You must use this name, because the default certificate is issued for `*.azurewebsites.net`.
 
   For the Kudu console, or Kudu REST API (deployment with Azure DevOps self-hosted agents for example), you must create two records in your Azure DNS private zone or your custom DNS server. This is done by the ARM template in this sample.
 
-  | Name                                      | Type | Value      |
-  |:------------------------------------------|:-----|:-----------|
-  | funcapp.privatelink.azurewebsites.net     |  A   | 10.0.1.11  |
-  | funcapp.scm.privatelink.azurewebsites.net |  A   | 10.0.1.11  |
+  | Name                                      | Type | Value                |
+  |:------------------------------------------|:-----|:---------------------|
+  | funcapp.privatelink.azurewebsites.net     |  A   | Private Endpoint IP  |
+  | funcapp.scm.privatelink.azurewebsites.net |  A   | Private Endpoint IP  |
 
 - You can use [curl](https://curl.se/), [Postman](https://www.postman.com/), [Apache JMeter](https://jmeter.apache.org/) or simply your favorite internet browser from the jumpbox virtual machine located to send requests to the HTTP-triggered function at https://<functions-app-name>.azurewebsites.net/api/processrequest?name=<your-name>. The Azure Functions app expose additional functions for Open API support. In particular, you can use the Swagger UI shown in the following picture to call the HTTP-triggered function:
 ![Resources](images/swagger.png)
