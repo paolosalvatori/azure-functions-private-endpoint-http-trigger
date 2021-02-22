@@ -443,8 +443,8 @@ You can proceed as follows to run the sample:
 
   When you deploy a Private Endpoint for the HTTP-triggered Azure Function, Azure updates the DNS entry to point to the canonical name `myfuncapp.privatelink.azurewebsites.net`.
 
-  | Name                                    | Type  |  Value                                  | Remarks                                    |
-  |:----------------------------------------|:------|:----------------------------------------|:-------------------------------------------|
+  | Name                                    | Type  |  Value                                  | Remarks                                  |
+  |:----------------------------------------|:------|:----------------------------------------|:-----------------------------------------|
   | myfuncapp.azurewebsites.net             | CNAME | myfuncapp.privatelink.azurewebsites.net | Azure creates this entry in Azure Public DNS to point the app service to the privatelink  |
   | myfuncapp.privatelink.azurewebsites.net | A     | 10.0.1.11                               | You manage this entry in your DNS system to point to your Private Endpoint IP address       |
 
